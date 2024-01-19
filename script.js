@@ -38,8 +38,8 @@ document.addEventListener('keydown', function (e) {
 ///////////////////////////////////////////////////////////////////
 // Button scroll
 
-  const s1coords = section1.getBoundingClientRect();
-  console.log(s1coords);
+const s1coords = section1.getBoundingClientRect();
+console.log(s1coords);
 
 btnScrollTo.addEventListener('click', function (e) {
   const s1coords = section1.getBoundingClientRect();
@@ -191,7 +191,7 @@ const allSections = document.querySelectorAll('.section');
 
 const revealSection = function (entries, observer) {
   const [entry] = entries;
-  console.log(entry)
+  console.log(entry);
   if (!entry.isIntersecting) return;
 
   entry.target.classList.remove('section--hidden');
@@ -323,7 +323,25 @@ const footerLogo = document.querySelector('.footer__logo');
 footerLogo.addEventListener('click', function (e) {
   e.preventDefault();
   console.log(header.scrollIntoView({ behavior: 'smooth' }));
+});
 
+const menu = document.querySelector('.nav__container-icon');
+
+document.addEventListener('click', function (e) {
+  if (!menu.contains(e.target)) {
+    nav.classList.remove('nav-mobile');
+    menu.classList.remove('openmenu');
+  }
+});
+
+menu.addEventListener('click', () => {
+  menu.classList.toggle('openmenu');
+
+  if (menu.classList.contains('openmenu')) {
+    nav.classList.add('nav-mobile');
+  } else {
+    nav.classList.remove('nav-mobile');
+  }
 });
 
 ///////////////////////////////////////////////////////////////////
