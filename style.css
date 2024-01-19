@@ -1023,6 +1023,10 @@ h4 {
     text-decoration: none;
     transition: 0.5s;
   }
+
+  button {
+    color: #000;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -1072,5 +1076,60 @@ h4 {
     font-family: inherit;
     color: var(--color-primary);
     z-index: -1;
+  }
+
+  .testimonial__author {
+    margin: 0;
+    line-height: 1;
+    gap: 1rem;
+  }
+
+  .testimonial__name {
+    grid-row: span 2;
+    align-self: center;
+  }
+
+  .header {
+    padding: 0rem 1rem 0 0.5rem;
+  }
+  .nav {
+    padding: 0;
+  }
+
+  /* MODAL WINDOW */
+  .modal {
+    padding: 5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+  }
+
+  .modal__header {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .modal__form {
+    margin: 0;
+    display: block;
+  }
+
+  .modal__form label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: block;
+  }
+
+  .modal__form input {
+    font-size: 1.7rem;
+    padding: 1rem 1.5rem;
+    display: block;
+  }
+
+  .modal__form .btn {
+    display: block;
+    margin-inline: auto;
   }
 }
